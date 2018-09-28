@@ -15,8 +15,11 @@ class IOT
 {
   public:
     IOT(String url,uint8_t pin);
+    IOT(String url);
     void connect(const char*,const char*);
-    String initBtn();
+    String getBtn();
+    String setDisplay(String text);
+    String urlencode(String url);
   private:
     String _url;
     uint8_t _pin;
